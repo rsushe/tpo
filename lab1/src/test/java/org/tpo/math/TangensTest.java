@@ -19,6 +19,11 @@ public class TangensTest {
     }
 
     @Test
+    public void testTangensNegativeOne() {
+        assertEquals(-1.55740772465490, Tangens.calculate(-1), BIAS);
+    }
+
+    @Test
     public void testTangensNegativePi() {
         assertEquals(0, Tangens.calculate(-Math.PI), BIAS);
     }
