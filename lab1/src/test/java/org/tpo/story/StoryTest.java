@@ -8,6 +8,7 @@ import org.tpo.story.action.DrinkAction;
 import org.tpo.story.action.ReadAction;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.tpo.story.Person.IQ_WISE_DOWN_AFTER_DRINKING;
 import static org.tpo.story.Person.IQ_WISE_UP_AFTER_DISCUSSION;
 import static org.tpo.story.Person.IQ_WISE_UP_AFTER_READING;
@@ -42,6 +43,14 @@ public class StoryTest {
         assertEquals(currentYearsInFly + 100, cosmicShip.getCurrentGalaxyYearsInFly());
     }
 
+    @Test
+    public void testFlyToDestination() {
+        int currentYearsInFly = cosmicShip.getCurrentGalaxyYearsInFly();
+
+        cosmicShip.anotherYearsInFlyPassed(cosmicShip.getDestination().getLightYearsFromEarth() - currentYearsInFly + 1);
+
+        assertTrue(cosmicShip.isInDestination());
+    }
 
     @Test
     public void testDrinkAction() {

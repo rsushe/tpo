@@ -4,9 +4,9 @@ public enum Destination {
     HORSES_HEAD_NEBULA("Туманность Конской Головы", 1500);
 
     private final String name;
-    private final long lightYearsFromEarth;
+    private final int lightYearsFromEarth;
 
-    Destination(String name, long lightYearsFromEarth) {
+    Destination(String name, int lightYearsFromEarth) {
         this.name = name;
         this.lightYearsFromEarth = lightYearsFromEarth;
     }
@@ -15,7 +15,7 @@ public enum Destination {
         return name;
     }
 
-    public long getLightYearsFromEarth() {
+    public int getLightYearsFromEarth() {
         return lightYearsFromEarth;
     }
 }
