@@ -39,7 +39,7 @@ public class TangensTest {
     }
 
     @Test
-    public void testTangensPositivePiNegativeHalfTwo() {
+    public void testTangensNegativePiHalfTwo() {
         assertThrows(ArithmeticException.class, () -> Tangens.calculate(-Math.PI / 2));
     }
 }
